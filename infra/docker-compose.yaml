@@ -12,10 +12,9 @@ services:
 
 
   web:
-    image: galenfea/api_yamdb:latest
-    
+    image: galenfea/yamdb_final:latest
     restart: always
-
+    
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/

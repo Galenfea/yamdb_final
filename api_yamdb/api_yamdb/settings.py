@@ -6,10 +6,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.getenv('WEB_SECRET_KEY', default='secret_key')
 
-DEBUG = False
+DEBUG = os.getenv('WEB_DEBAG', default=False)
 
-ALLOWED_HOSTS = os.getenv('WEB_ALLOWED_HOSTS', default=['*'])
-
+ALLOWED_HOSTS = os.getenv('WEB_ALLOWED_HOSTS', default='*').split()
 
 # Application definition
 
