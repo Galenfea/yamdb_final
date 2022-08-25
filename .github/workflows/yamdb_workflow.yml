@@ -73,11 +73,11 @@ jobs:
           echo WEB_ALLOWED_HOSTS=${{ secrets.WEB_ALLOWED_HOSTS }} >> .env
           echo WEB_SECRET_KEY=${{ secrets.WEB_SECRET_KEY }} >> .env
           sudo docker-compose up -d 
-    - name: migration_static_and_fixtures
-    - run: |
+    - name: Migration_static_and_fixtures
+      run: | 
         docker-compose exec web python manage.py migrate
         docker-compose exec web python manage.py collectstatic --no-input
-        docker-compose exec web python manage.py loaddata fixtures.json
+        docker-compose exec web python manage.py loaddata fixtures.json 
 
   send_message:
     runs-on: ubuntu-latest
