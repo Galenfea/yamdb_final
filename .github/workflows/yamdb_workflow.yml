@@ -75,9 +75,9 @@ jobs:
           sudo docker-compose up -d 
     - name: migration_static_and_fixtures
     - run: |
-      docker-compose exec web python manage.py migrate
-      docker-compose exec web python manage.py collectstatic --no-input
-      docker-compose exec web python manage.py loaddata fixtures.json
+        docker-compose exec web python manage.py migrate
+        docker-compose exec web python manage.py collectstatic --no-input
+        docker-compose exec web python manage.py loaddata fixtures.json
 
   send_message:
     runs-on: ubuntu-latest
