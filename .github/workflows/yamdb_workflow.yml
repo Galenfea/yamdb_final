@@ -19,7 +19,7 @@ jobs:
       run: | 
         python -m pip install --upgrade pip 
         pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
-        pip install -r requirements.txt 
+        pip install -r api_yamdb/requirements.txt
 
     - name: Test with flake8 and django tests
       run: |
@@ -72,14 +72,8 @@ jobs:
           echo DB_PORT=${{ secrets.DB_PORT }} >> .env
           echo WEB_ALLOWED_HOSTS=${{ secrets.WEB_ALLOWED_HOSTS }} >> .env
           echo WEB_SECRET_KEY=${{ secrets.WEB_SECRET_KEY }} >> .env
-          ls
-          pwd
           sudo docker-compose up -d 
     - name: Migration_static_and_fixtures
-      run: | 
-        docker-compose exec web python manage.py migrate
-        docker-compose exec web python manage.py collectstatic --no-input
-        docker-compose exec web python manage.py loaddata fixtures.json 
 
   send_message:
     runs-on: ubuntu-latest
