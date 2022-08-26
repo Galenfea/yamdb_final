@@ -36,6 +36,7 @@ class UserPremission(permissions.BasePermission):
     def check_role_premissions(self, request, role):
         if not request.user.is_anonymous:
             return request.user.role == role or request.user.is_superuser
+        return None
 
     def has_permission(self, request, view):
         return request.user.is_authenticated
