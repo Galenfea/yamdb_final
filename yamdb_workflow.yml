@@ -74,7 +74,7 @@ jobs:
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
             echo WEB_ALLOWED_HOSTS=${{ secrets.WEB_ALLOWED_HOSTS }} >> .env
             echo WEB_SECRET_KEY=${{ secrets.WEB_SECRET_KEY }} >> .env
-            cd infra && sudo docker-compose up -d
+            sudo docker-compose up -d
 
   send_message:
     runs-on: ubuntu-latest
