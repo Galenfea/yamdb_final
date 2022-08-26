@@ -1,6 +1,6 @@
 from django.db import models
-
 from users.models import User
+
 from .validators import validate_one_to_ten_range, validate_title_year
 
 # Литеральные константы

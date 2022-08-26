@@ -10,23 +10,16 @@ from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
-
 from reviews.filters import TitleFilter
 from reviews.models import Category, Comment, Genre, Review, Title
 from users.models import User
+
 from .permissions import Admin, Moder, ReadOnly, UserPremission
-from .serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    GenreSerializer,
-    ReviewSerializer,
-    TitleReadSerializer,
-    TitleWriteSerializer,
-    UserEditingSerializer,
-    UserSerializer,
-    UserSignupConfirmSerializer,
-    UserSignupSerializer,
-)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, ReviewSerializer,
+                          TitleReadSerializer, TitleWriteSerializer,
+                          UserEditingSerializer, UserSerializer,
+                          UserSignupConfirmSerializer, UserSignupSerializer)
 
 
 class ReviewViewSet(viewsets.ModelViewSet):
