@@ -1,4 +1,4 @@
-# YAmDB_FINAL
+# YAMDB_FINAL
 ![Yamdb-app_workflow](https://github.com/Galenfea/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 Предназначен для обмена мнениями о произведениях искусства и выставления им рейтинга, обеспечен CI:
@@ -41,12 +41,12 @@ _Установите Docker Desctop:_
 
 _Клонируйте репозиторий:_
 ```
-git clone https://github.com/Galenfea/infra_sp2.git
+git clone https://github.com/Galenfea/yamdb_final.git
 ```
 
 _Перейдите в репозиторий в командной строке:_
 ```
-cd infra_sp2/infra
+cd yamdb_final/infra
 ```
 
 _Создайте файл .env:_
