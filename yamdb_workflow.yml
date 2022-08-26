@@ -76,8 +76,11 @@ jobs:
             echo WEB_SECRET_KEY=${{ secrets.WEB_SECRET_KEY }} >> .env
             sudo docker-compose up -d
             sudo docker-compose exec web python manage.py migrate
+            echo MIGRATE
             sudo docker-compose exec web python manage.py collectstatic --no-input
+            echo STATIC
             sudo docker-compose exec web python manage.py loaddata fixtures.json
+            echo FIXTURE
 
   send_message:
     runs-on: ubuntu-latest
