@@ -178,3 +178,4 @@ _Тестовый суперпользователь:_
 username: admin
 password: admin
 ```
+tet
